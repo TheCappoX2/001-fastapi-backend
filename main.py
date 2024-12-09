@@ -17,15 +17,15 @@ app = FastAPI()
 app.include_router(todos.router)
 
 
-origins = [
+#origins = [
 #    "http://localhost:3000",
-    "https://002-nextjs-frontend-1xis0z99f-isaccos-projects-3ba59c28.vercel.app/",
-]
+#    "https://002-nextjs-frontend-1xis0z99f-isaccos-projects-3ba59c28.vercel.app/",
+#]
 
 # CORS configuration, needed for frontend development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
