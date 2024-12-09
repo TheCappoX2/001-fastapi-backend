@@ -16,10 +16,8 @@ app = FastAPI()
 # router: comment out next line till create it
 app.include_router(todos.router)
 
-
 origins = [
-    "http://localhost:3000",  # Para pruebas locales
-    "https://002-nextjs-frontend-5gt7c3z29-isaccos-projects-3ba59c28.vercel.app//",  # URL del frontend en Vercel
+    "https://002-nextjs-frontend.vercel.app"
 ]
 
 # CORS configuration, needed for frontend development
